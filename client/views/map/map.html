@@ -1,0 +1,38 @@
+<template name="Map">
+  <div id="map">
+    <div id="heat-map-container">
+      <img id="map-img" src="/img/agora_mapa.jpg" />
+    </div>
+    {{#if showContactInfo}}
+    <div id="contact-info">
+      {{> Map_ContantInfo}}
+    </div>
+    {{/if}}
+    <div id="close" class="ui red button">
+      <i class="close icon"></i> Cerrar
+    </div>
+  </div>
+</template>
+
+<template name="Map_ContantInfo">
+  <div class="ui card">
+    <div class="image">
+      <img src="/images/avatar2/large/kristy.png">
+    </div>
+    <div class="content">
+      <a class="header">Kristy</a>
+      <div class="meta">
+        <span class="date">Joined in 2013</span>
+      </div>
+      <div class="description">
+        Kristy is an art director living in New York.
+      </div>
+    </div>
+    <div class="extra content">
+      <a>
+        <i class="user icon"></i>
+        22 Friends
+      </a>
+    </div>
+  </div>
+</template>

@@ -15,6 +15,7 @@ FlowRouter.route('/login', {
   name: 'login',
   action: function(params, queryParams) {
     console.log("Yeah! We are on the login");
+    BlazeLayout.render('LayoutDefault', { content: 'Login'})
   }
 });
 
@@ -22,6 +23,7 @@ FlowRouter.route('/map', {
   name: 'map',
   action: function(params, queryParams) {
     console.log("Yeah! We are on the map");
+    BlazeLayout.render('LayoutDefault', { content: 'Map'})
   }
 });
 

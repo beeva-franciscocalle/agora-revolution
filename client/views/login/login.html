@@ -1,0 +1,51 @@
+<template name="Login">
+  <div id="login">
+    <div id="grid">
+      <div class="column">
+        <h2 class="ui black image header">
+          <img src="img/agora_logo.png" class="image">
+          <div class="content">Entrar a Agora Revolution
+          </div>
+        </h2>
+        <form class="ui large form">
+          <div class="ui stacked segment">
+            <div class="field">
+              <div class="ui left icon input">
+                <i class="user icon"></i>
+                <input type="text" name="email" placeholder="E-mail address">
+              </div>
+            </div>
+            <div class="field">
+              <div class="ui left icon input">
+                <i class="lock icon"></i>
+                <input type="password" name="password" placeholder="Password">
+              </div>
+            </div>
+            <div class="ui fluid large black submit button">Login</div>
+          </div>
+          <div class="ui error message"></div>
+        </form>
+
+        {{#if tagNFC}}
+        <div id="linkedin-login" class="ui segment">
+          <h2 class="ui blue image header">
+            <img src="img/linkedin_logo.png" class="image">
+            <div class="content">Entrar con linkedin + NFC</div>
+          </h2>
+        </div>
+
+        {{#if error}}
+        <div class="ui red message">
+          No hemos podido conectarte con linkedin. La culpa es de Paco.
+        </div>
+        {{/if}}
+
+        {{/if}}
+
+        <div class="ui message">
+          &iquest;Eres nuevo? <a href="#">Registr&aacute;te</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
