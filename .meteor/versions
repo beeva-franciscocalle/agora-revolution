@@ -44,6 +44,7 @@ localstorage@1.0.11
 logging@1.1.14
 meteor@1.2.16
 meteor-base@1.0.4
+meteorhacks:picker@1.0.3
 minifier-css@1.2.13
 minifier-js@1.2.13
 minimongo@1.0.17
@@ -74,6 +75,7 @@ spacebars@1.0.12
 spacebars-compiler@1.0.12
 standard-minifier-css@1.1.8
 standard-minifier-js@1.1.8
+steeve:jquery-qrcode@0.2.2
 templating@1.1.14
 templating-tools@1.0.4
 tracker@1.1.0

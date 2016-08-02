@@ -27,9 +27,10 @@ FlowRouter.route('/map', {
   }
 });
 
-FlowRouter.route('/stats', {
-  name: 'stats',
+FlowRouter.route('/highlights', {
+  name: 'highlights',
   action: function(params, queryParams) {
-    console.log("Yeah! We are on the stats");
+    console.log("Yeah! We are on the highlights");
+    BlazeLayout.render('LayoutDefault', { content: 'Highlights'})
   }
 });

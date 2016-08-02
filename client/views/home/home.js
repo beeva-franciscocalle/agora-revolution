@@ -11,4 +11,7 @@ Template.Home.events({
       },
     });
   },
+  'click #check-them-out': () => {
+    FlowRouter.go('highlights');
+  },
 });

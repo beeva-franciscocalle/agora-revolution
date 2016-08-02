@@ -1,8 +1,9 @@
+import { Meteor } from 'meteor/meteor';
+import { ReactiveVar } from 'meteor/reactive-var';
 import { Template } from 'meteor/templating';
 import { FlowRouter } from 'meteor/kadira:flow-router';
-import { ReactiveVar } from 'meteor/reactive-var';
 
-const error = new ReactiveVar(null);
+let error = new ReactiveVar(null);
 
 Template.Login.events({
   'click #linkedin-login': (event, tpl) => {
@@ -10,7 +11,9 @@ Template.Login.events({
       if (err) {
         error.set(err);
       } else {
-        FlowRouter.go('map');
+        Meteor.call('/user/tag', FlowRouter.getQueryParam('tag'), (err, res) => {
+          FlowRouter.go('map');
+        });
       }
     });
   }
@@ -25,6 +28,9 @@ Template.Login.helpers({
   }
 });
 
+Template.Login.onCreated(() => {
+  error = new ReactiveVar(null);
+});
 Template.Login.onRendered(() => {
   this.$('#grid').attr('class',' ui middle aligned center aligned grid');
 });

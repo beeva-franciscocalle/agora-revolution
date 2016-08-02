@@ -7,6 +7,20 @@
           <div class="content">Entrar a Agora Revolution
           </div>
         </h2>
+        {{#if tagNFC}}
+        <div id="linkedin-login" class="ui segment">
+          <h2 class="ui blue image header">
+            <img src="img/linkedin_logo.png" class="image">
+            <div class="content">Entrar con linkedin + NFC</div>
+          </h2>
+        </div>
+
+        {{#if error}}
+        <div class="ui red message">
+          No hemos podido conectarte con linkedin. La culpa es de Paco.
+        </div>
+        {{/if}}
+        {{else}}
         <form class="ui large form">
           <div class="ui stacked segment">
             <div class="field">
@@ -21,25 +35,10 @@
                 <input type="password" name="password" placeholder="Password">
               </div>
             </div>
-            <div class="ui fluid large black submit button">Login</div>
+            <div class="ui fluid large black submit button">Entrar</div>
           </div>
           <div class="ui error message"></div>
         </form>
-
-        {{#if tagNFC}}
-        <div id="linkedin-login" class="ui segment">
-          <h2 class="ui blue image header">
-            <img src="img/linkedin_logo.png" class="image">
-            <div class="content">Entrar con linkedin + NFC</div>
-          </h2>
-        </div>
-
-        {{#if error}}
-        <div class="ui red message">
-          No hemos podido conectarte con linkedin. La culpa es de Paco.
-        </div>
-        {{/if}}
-
         {{/if}}
 
         <div class="ui message">
