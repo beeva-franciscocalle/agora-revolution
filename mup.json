@@ -8,12 +8,12 @@
     }
   ],
   "setupMongo": true,
-  "appName": "Agora Revolution by Beeva",
+  "appName": "agora-rev",
   "app": "/Users/francisco.calle/Dev/beeva/hackathon/agora-rev/web",
   "env": {
     "PORT": 80,
     "ROOT_URL": "http://37.139.18.118"
   },
-  "deployCheckWaitTime": 60,
+  "deployCheckWaitTime": 90,
   "enableUploadProgressBar": true
 }

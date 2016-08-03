@@ -33,5 +33,5 @@ Template.HighlightsItem.onRendered(function () {
         $item.remove();
       }
     });
-  }, 5000);
+  }, 10000);
 });
